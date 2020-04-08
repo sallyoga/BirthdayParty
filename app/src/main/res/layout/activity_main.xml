@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	android:layout_margin="20dp"
+	tools:context=".MainActivity">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="30dp"
+		android:layout_marginBottom="50dp"
+		android:text="Birthday Party"
+		android:textColor="@android:color/holo_blue_light"
+		android:textSize="24sp"
+		android:textStyle="bold" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Please Enter a list of birth dates and\n names, each one in a different line"
+		android:textColor="@android:color/holo_blue_light"
+		android:textSize="18sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<EditText
+		android:id="@+id/birthdays_list"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="40dp"
+		android:hint="e.g.\n  1995-03-29 Alice\n  1988-04-01 Bob\n   ..."
+		android:textColor="@android:color/background_dark"
+		android:textSize="18sp"
+		android:gravity="center_horizontal"
+		android:text="1995-04-31 Alice\n1988-05-02 Bob\n2005-05-12 Carol\n1979-05-10 Dave"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		android:autofillHints="e.g.\n  1995-03-29 Alice\n  1988-04-01 Bob\n   ..."
+		android:inputType="" />
+
+	<Button
+		android:id="@+id/get_parties_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dp"
+		android:elevation="100dp"
+		android:padding="20dp"
+		android:background="@android:color/transparent"
+		android:textColor="@android:color/holo_blue_light"
+		android:text="Get Parties" />
+
+	<ProgressBar
+		android:id="@+id/progress_bar"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:visibility="gone"/>
+
+	<TextView
+		android:id="@+id/birthDay_parties"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:layout_margin="20dp"
+		android:textColor="@android:color/holo_blue_light"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>
